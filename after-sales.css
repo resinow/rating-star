@@ -1,0 +1,256 @@
+
+html, body {
+  background-color: #f7f7f7;
+  padding-bottom: 105px;
+}
+
+*, :after, :before {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+
+.btn-sm {
+  font-size: 14px;
+  width: 130px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  user-select: none;
+}
+
+.btn-brown {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #99604c;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #99604c;
+}
+
+.btn-brown:hover {
+  background-color: #835342;
+  border: 1px solid #835342;
+}
+
+input {
+  outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*rate*/
+.as-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+}
+
+#rateOverlay {
+  /*display: none;*/
+  /*opacity: 0;*/
+  border: 1px solid #e6e6e6;
+}
+
+.rate-frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 450px;
+  height: 300px;
+  margin: -150px 0 0 -200px;
+  padding: 20px;
+  background: #fff;
+}
+
+.rate-head {
+  padding: 0 10px;
+  margin: 0 0 20px;
+}
+
+.rate-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.rate-content {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  padding: 4px;
+  text-align: center;
+}
+
+#starZero, .star-frame {
+  float: left;
+  position: relative;
+  /*display: inline-block;*/
+  text-align: center;
+  line-height: 34px;
+  cursor: pointer;
+}
+
+#starZero {
+  height: 42px;
+  width: 12px;
+  padding: 4px;
+}
+
+.star-frame {
+  height: 38px;
+  width: 38px;
+  padding: 2px;
+  margin: 2px;
+}
+
+.star-frame .star {
+  font-size: 34px;
+  line-height: 34px;
+  color: #99604c;
+  transition: all .5s;
+}
+
+.star-frame .star-left, .star-frame .star-right {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 50%;
+  bottom: 0;
+}
+
+.star-frame .star-left {
+  left: 0;
+}
+
+.star-frame .star-right {
+  right: 0;
+}
+
+.rate-remark {
+  height: 130px;
+  margin-bottom: 25px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+#rateRemark, #rateRemark:focus, #rateRemark:hover {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+#rateRemark:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+#rateRemark::-webkit-outer-spin-button,
+#rateRemark::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.rate-footer {
+  padding: 0 10px;
+  text-align: right;
+}
+
+@media (max-width: 1366px) {
+
+  @media (max-width: 1200px) {
+
+    @media (max-width: 1024px) {
+
+      @media (max-width: 992px) {
+
+        @media (max-width: 768px) {
+
+          @media (max-width: 720px) {
+
+            @media (max-width: 520px) {
+
+              .rate-frame {
+                width: calc(100% - 40px);
+                height: 300px;
+                margin: -150px 0 0 calc(20px - 50%);
+                padding: 20px;
+              }
+
+              .rate-head {
+                text-align: center;
+              }
+
+              .rate-title {
+                display: block;
+                text-align: left;
+              }
+
+              .rate-content {
+                /*display: block;*/
+                margin: 0 auto;
+              }
+
+              .rate-remark {
+                height: 108px;
+              }
+
+              @media (max-width: 480px) {
+
+                @media (max-width: 414px) {
+
+                  @media (max-width: 375px) {
+
+                    .rate-frame {
+                      height: 260px;
+                      margin: -130px 0 0 calc(15px - 50%);
+                    }
+
+                    .rate-remark {
+                      height: 68px;
+                    }
+
+                    /*---------------------------END----------------------*/
+                    @media (max-width: 360px) {
+
+                      @media (max-width: 340px) {
+
+                        @media (max-width: 320px) {
+
+                          .rate-frame {
+                            width: calc(100% - 30px);
+                            margin: -130px 0 0 calc(15px - 50%);
+                            padding: 20px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
